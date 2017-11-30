@@ -38,7 +38,24 @@
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
-</div>
+    <div th:fragment="searchResults">
 
+    <table class="job-listing" th:each="mapItem : ${jobs}">
+
+        <tbody>
+
+            <tr th:each="entryJob : ${mapItem}">
+                <td th:text="${entryJob.key}"></td>
+                <td th:text="${entryJob.value}"></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
+
+                        <!--column-key, value-value, directed here after choosing key 'list'-->
+                <!--<td><a th:href="@{/search/results(column=${searchType},value=${searchTerm})}"></a></td>-->
+
+</div>
 </body>
 </html>

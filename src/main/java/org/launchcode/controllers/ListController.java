@@ -26,6 +26,7 @@ public class ListController {
         columnChoices.put("all", "All");
     }
 
+    //displays choices to find jobs ^^^
     @RequestMapping(value = "")
     public String list(Model model) {
 
@@ -34,6 +35,7 @@ public class ListController {
         return "list";
     }
 
+    //routed after user selects one of the col choices
     @RequestMapping(value = "values")
     public String listColumnValues(Model model, @RequestParam String column) {
 

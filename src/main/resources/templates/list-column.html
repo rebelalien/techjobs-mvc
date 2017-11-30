@@ -14,6 +14,8 @@
 
         <table>
             <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
+
+                <!--column-key, value-value, directed here after choosing key 'list'-->
                 <td><a th:href="@{/list/jobs(column=${column},value=${item})}" th:text="${item}"></a></td>
             </tr>
         </table>
